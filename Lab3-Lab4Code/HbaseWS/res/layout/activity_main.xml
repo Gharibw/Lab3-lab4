@@ -1,0 +1,112 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.HbaseWS.MainActivity"
+    tools:ignore="MergeRootFrame" 
+    android:background="#ccc">
+
+    <TextView
+        android:id="@+id/coloumFamilyLable"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tableName"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="18dp"
+        android:textColor="#ff0000"
+        android:text="Enter Coloumn Families" />
+
+    <EditText
+        android:id="@+id/coloumFamily"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/coloumFamilyLable"
+        android:layout_centerHorizontal="true"
+        android:ems="10"
+        android:hint="Coloum1:Coloum2:.." />
+
+    <EditText
+        android:id="@+id/tableName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/coloumFamily"
+        android:layout_below="@+id/tableNameLable"
+        android:ems="10"
+        android:hint="Table" />
+
+    <TextView
+        android:id="@+id/tableNameLable"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/createTableButton"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="16dp"
+        android:textColor="#ff0000"
+        android:text="Enter Table Name" />
+
+    <Button
+        android:id="@+id/retrieveTableButton"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/insertTableButton"
+        android:layout_alignBottom="@+id/insertTableButton"
+        android:layout_alignRight="@+id/coloumFamily"
+        android:text="Retrieve From Table" />
+
+    <Button
+        android:id="@+id/deleteTableButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/createTableButton"
+        android:layout_alignBottom="@+id/createTableButton"
+        android:layout_alignLeft="@+id/retrieveTableButton"
+        android:text="Delete Table" />
+
+    <Button
+        android:id="@+id/insertTableButton"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/coloumFamily"
+        android:layout_below="@+id/createTableButton"
+        android:layout_marginTop="19dp"
+        android:text="Insert Into Table" />
+
+    <Button
+        android:id="@+id/createTableButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/insertTableButton"
+        android:layout_below="@+id/coloumFamily"
+        android:layout_marginTop="25dp"
+        android:text="Create Table" />
+
+    <Button
+        android:id="@+id/upload"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/TrainFileButton"
+        android:layout_alignBottom="@+id/TrainFileButton"
+        android:layout_toLeftOf="@+id/coloumFamilyLable"
+        android:text="upload" />
+
+    <Button
+        android:id="@+id/TestButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/TrainFileButton"
+        android:layout_alignBottom="@+id/TrainFileButton"
+        android:layout_alignParentRight="true"
+        android:text="Test Data" />
+
+    <Button
+        android:id="@+id/TrainFileButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/retrieveTableButton"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="43dp"
+        android:text="Train File" />
+    
+    </RelativeLayout>
+
